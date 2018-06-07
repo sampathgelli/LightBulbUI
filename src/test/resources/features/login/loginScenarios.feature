@@ -16,9 +16,6 @@ Feature: Qantas Frequent Flyer
     And enter the pin as "<pin>"
     And Accept conditions
     And enter card holdername as "<cardholdername>" cardnumber as "<cardNumber>" expiry date as "<expMonth>" expiry year as "<expYear>" CVV as "<cvv>"
-    And complete captcha
-    When click on register
-    Then I should see dashboard
 
   @WIP
     Examples: Valid Data

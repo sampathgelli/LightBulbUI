@@ -187,12 +187,6 @@ public class RegisterPage extends GenericPageObject {
         getDriver().switchTo().frame(getDriver().findElement(By.cssSelector(".gw-proxy-securityCode")));
         cardNumber.type(ud.getCvv());
         getDriver().switchTo().defaultContent();
-        getJavascriptExecutorFacade().executeScript("arguments[0].scrollIntoView();arguments[1].click();", getDriver().findElement(By.cssSelector("#recaptcha-anchor .recaptcha-checkbox-checkmark")), getDriver().findElement(By.cssSelector("#recaptcha-anchor .recaptcha-checkbox-checkmark")));
-        captcha.click();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 }

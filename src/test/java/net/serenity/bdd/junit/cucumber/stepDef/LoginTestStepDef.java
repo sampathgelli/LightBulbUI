@@ -20,7 +20,6 @@ public class LoginTestStepDef extends GenericDeclarationClass {
     UserDetails ud = new UserDetails();
 	
 	@Steps
-	//LoginTestSteps LT_steps;
 	RegisterTestSteps RT_steps;
 	
     @Given("^the application url$")
@@ -88,18 +87,5 @@ public class LoginTestStepDef extends GenericDeclarationClass {
     public void complete_captcha() throws Throwable {
         throw new PendingException();
     }
-
-/*
-    @When("^I login to payments console using username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
-    public void i_search_for_something(String username, String password) throws Throwable {
-    	ld.setAll(username,password);
-        LT_steps.performSearch(ld);
-    }
-*/
-
-	@Before
-	public void afterTest(){
-		RT_steps.closeBrowser();
-	}
 
 }

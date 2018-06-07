@@ -19,12 +19,6 @@ public class RegisterTestSteps extends ScenarioSteps {
         registerPage.registerUserDet(userDetails);
     }
 
-    @cucumber.api.java.After
-    public void closeBrowser() {
-        getDriver().close();
-        getDriver().quit();
-    }
-
     @Step
     public void registerUserMobile(UserDetails ud) {
         registerPage.registerUserMobile(ud);
