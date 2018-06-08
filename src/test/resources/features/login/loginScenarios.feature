@@ -24,21 +24,5 @@ Feature: Qantas Frequent Flyer
 
   @SIT
     Examples: Valid Data
-      | country   | title | gender | firstName | lastName |
-      | Australia | Mr    | Male   | Test      | Test     |
-
-  Scenario Outline: Unsuccessful login to Payments Console
-
-    Given the application url
-    When I login to payments console using username as "<username>" and password as "<password>"
-    Then I should see dashboard
-
-  @prod
-    Examples: Valid Data
-      | username | password  |
-      | UPRUAT12 | Password2 |
-
-  @SIT
-    Examples: Valid Data
-      | username | password  |
-      | UPRUAT1  | Password2 |
+      | country   | title | gender | firstName | lastName | preferredmethod | mobilenumber | addresstype | addressline        | secondline | suburb     | state          | postcode | email         | confirmEmail  | birthday | month | year | maidenName | pin  | cardholdername | cardNumber       | expMonth | expYear | cvv |
+      | Australia | Mr    | Male   | Test      | Test     | Mobile          | 411111111    | Home        | 20 Libarator Drive | Point cook | Point Cook | Victoria (VIC) | 3030     | test@test.com | test@test.com | 11       | Apr   | 1981 | maidenname | 8643 | Sampath        | 4111111111111111 | 02       | 20    | 123 |
